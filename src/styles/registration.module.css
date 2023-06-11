@@ -1,0 +1,96 @@
+.container {
+    display: flex;
+    height: 100%;
+    margin: 0;
+  }
+  
+  .leftpanel {
+    flex: 1;
+    background-color: #305399;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  
+  .subtitle {
+    color: #fff;
+    font-size: 50px;
+  }
+  
+  .rightpanel {
+    position: relative;
+    flex: 2;
+    padding: 20px;
+    margin: 0%;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  
+  .heading {
+    font-size: 24px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+    text-align: center;
+    color: #305399;
+  }
+  
+  .formgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .photocontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .photoinput {
+    display: none;
+  }
+  
+  .recentphoto {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+  
+  .photolabel {
+    color: #777;
+    font-size: 14px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .registerbutton {
+    background-color: #305399;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Additional CSS styles can be added here */
+  
