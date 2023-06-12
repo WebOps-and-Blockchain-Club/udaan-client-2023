@@ -1,11 +1,17 @@
 import Head from 'next/head'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import Styles from './../styles/Home.module.css'
+import Styles from '@/styles/Home.module.css'
 import Script from 'next/script'
 import Image from 'next/image'
 import Link from 'next/link'
 import Carousel from '@/components/Carousel'
+import bullseye from '#/🦆 illustration _target aim_.png'
+import TeamworkLogo from '#/🦆 illustration _Team Work_.png'
+import LeftVisionImage from '#/Ellipse 21.png'
+import RighVisionImage from '#/Ellipse 22.png'
+import Rule from '@/components/Rule'
+import {Users} from "@phosphor-icons/react"
 
 export default function Home() {
   return (
@@ -20,8 +26,13 @@ export default function Home() {
       <Script src='https://kit.fontawesome.com/16ae4a1ead.js' crossOrigin='anonymous' strategy='lazyOnload' />
       <Navbar />
       <main className={Styles.main}>
+
+
+        <Carousel />
+
+
         <div className={Styles.banner}>
-          <div className='Logo'>
+          <div className={Styles.Logo}>
             <Image src="/UdaanLogo.png" width={185} height={95} alt='Udaan Logo' />
           </div>
           <h1>Agency<span>Name</span></h1>
@@ -37,9 +48,55 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Carousel />
+
+
+
+        <div className={Styles.aimSection}>
+          <div className={Styles.aimContainer}>
+            <div className={Styles.aimimage}>
+              <Image alt='Bulls eye board' src={bullseye} ></Image>
+              <div className={Styles.Aimquestion}>
+                <h1>Aims of NCC UDAAN ?</h1>
+                <Rule />
+              </div>
+            </div>
+            <div className={Styles.aimtext}>
+              <h3>Write few lines on the aim and objectives of UDAAN</h3>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div className={Styles.FirstResponder}>
+          <div className={Styles.FirstResponderContainer}>
+            <div className={Styles.leftsideImage}>
+              <Image alt='Ncc training image' src={LeftVisionImage}></Image>
+            </div>
+            <div className={Styles.VisionMission}>
+              <Image alt='Team work Image' src={TeamworkLogo} ></Image>
+              <div className={Styles.Visioncontainer}>
+                <h1>Vision and Mission</h1>
+                <Rule />
+              </div>
+              <div className={Styles.Visiontext}>
+                <h3>Write few lines on the vision and mission of UDAAN</h3>
+              </div>
+              <button> <span><Users size={24} /></span>First Responder</button>
+            </div>
+            <div className={Styles.rightsideImage}>
+            <Image alt='Ncc training image' src={RighVisionImage}></Image>
+            </div>
+          </div>
+        </div>
       </main>
+
+
+
       <Footer />
+
+
     </>
 
   )

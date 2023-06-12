@@ -273,21 +273,14 @@ body {
     align-items: center;
   }
   
-  .footerLeft a svg {
-    padding: 0.5rem;
-    background-color: #6366f1;
-    color: #ffffff;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 9999px;
-  }
   
-  .footerLeft a span {
+  .footerLeft a div.Cfi-Webops-Logo {
     margin-left: 0.75rem;
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-  .footerLeft a p {
+  .footerLeft  p {
+    text-align: center;
     margin-top: 0.5rem;
     color: #6b7280;
     font-size: 0.875rem;
@@ -437,3 +430,5 @@ body {
     width: 25%;
   }
 }
+
+

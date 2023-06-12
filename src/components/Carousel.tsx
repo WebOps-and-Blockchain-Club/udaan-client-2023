@@ -25,7 +25,8 @@ const Carousel = () => {
   }
 
   return (
-    <div className='carouselMain'>
+    <div>
+        <div className='carouselMain'>
       {/* <!-- Slideshow container --> */}
       <div className="slideshow-container">
 
@@ -59,6 +60,7 @@ const Carousel = () => {
         <span className="dot" onClick={() => { currentSlide(2) }}></span>
         <span className="dot" onClick={() => { currentSlide(3) }}></span>
       </div>
+    </div>
     </div>
   );
 }

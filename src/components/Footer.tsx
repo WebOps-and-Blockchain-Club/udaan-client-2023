@@ -1,4 +1,8 @@
 import React from 'react';
+import Image from 'next/image';
+import webops from "#/Webops.png"
+import cfi from '#/cfi.png';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -7,12 +11,15 @@ const Footer = () => {
         <div className="footerContainer">
           <div className="footerLeft">
             <a>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
-              <span >WebOPs</span>
+              <div className='webopsLogo'>
+              <Image src={webops} alt='Webops Logo'/>
+              </div>
+              <div className='webopsLogo'>
+              <Image src={cfi} alt="Center For Innovation logo"/>
+              </div>
+             
             </a>
-            <p>Designed and Created by CFI webops</p>
+              <p>Developed by WebOps and Blockchain Club Centre For Innovationps, IIT Madras</p>
           </div>
           <div className="footerRight">
             <div className="footerRightContainer">
@@ -91,8 +98,10 @@ const Footer = () => {
         </div>
         <div className="footer-bottom">
           <div className="footer-bottomContainer">
-            <p>© 2020 Tailblocks —
-              <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" target="_blank">@knyttneve</a>
+            <p>© 2023 Webops and Blockchain club CFI —
+            <Link href="https://cfi.iitm.ac.in/clubs/webops-and-blockchain-club" passHref legacyBehavior>
+              <a  rel="noopener noreferrer" target="_blank">Webops@cfi</a>
+              </Link>
             </p>
             <span>
               <a className="text-gray-500">

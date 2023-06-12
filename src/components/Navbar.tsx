@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { useState } from 'react';
+import {CaretDown} from "@phosphor-icons/react";
 
 const Navbar = () => {
   const [response, setresponse] = useState(false);
@@ -24,8 +25,8 @@ const Navbar = () => {
                 <Link href={'/'} passHref legacyBehavior><a href="#contact">DONATE</a></Link>
                 <Link href={'/'} passHref legacyBehavior><a href="#contact">FIRST RESPONDER</a></Link>
                 <div className="dropdown">
-                    <button className="dropbtn">DROPDOWN
-                        <i className="fa fa-caret-down"></i>
+                    <button className="dropbtn">DROPDOWN 
+                    <i><CaretDown/></i>
                          {/* try to use side bar insted of mobile menue */}
                     </button>
                     <div className="dropdown-content">
