@@ -1,96 +1,135 @@
 .container {
-    display: flex;
-    height: 100%;
-    margin: 0;
-  }
-  
-  .leftpanel {
-    flex: 1;
-    background-color: #305399;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .title {
-    color: #fff;
-    font-size: 50px;
-    font-weight: 400;
-    letter-spacing: 0em;
-    text-align: center;
-  }
-  
-  .subtitle {
-    color: #fff;
-    font-size: 50px;
-  }
-  
-  .rightpanel {
-    position: relative;
-    flex: 2;
-    padding: 20px;
-    margin: 0%;
-    background-color: #fff;
-    border-radius: 10px;
-  }
-  
-  .heading {
-    font-size: 24px;
-    margin-bottom: 60px;
-    margin-top: 40px;
-    text-align: center;
-    color: #305399;
-  }
-  
-  .formgrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
-  
-  .input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .photocontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .photoinput {
-    display: none;
-  }
-  
-  .recentphoto {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-top: 10px;
-  }
-  
-  .photolabel {
-    color: #777;
-    font-size: 14px;
-    margin-top: 5px;
-    cursor: pointer;
-  }
-  
-  .registerbutton {
-    background-color: #305399;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Additional CSS styles can be added here */
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #305399;
+}
+
+.registrationContainer {
+  width: 70vw;
+  margin-right: 0;
+  margin-left: auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.heading2 {
+  margin-top: 5vh;
+  margin-bottom: 10px;
+  font-size: 35px;
+  text-align: center;
+  color: #305399;
+}
+
+.heading3 {
+  text-align: center;
+  font-size: 35px;
+  color: #305399;
+  margin-bottom: 10vh;
+}
+
+
+.imageTitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-direction: column;
+  width: 300px; /* Adjust the width as per your image size */
+  height: 300px; /* Adjust the height as per your image size */
+}
+
+.image {
+  margin-left: 25%;
+  margin-top: -220%;
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.title {
+  /* background-color: #000; */
+  width: 100%;
+  margin-left: 18%;
+  text-align: center;
+  margin-top: -120%;
+}
+
+.udaan {
+  font-size: 42px;
+  margin: 4px;
+}
+
+.responder {
+  font-size: 42px;
+  margin: 0;
+}
+
+
+.form {
+  margin-top: 20px;
+}
+
+.formRow {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.formInput {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  height: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  margin-left: 4px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 0.1 0.1 black;
+}
+
+.textarea{
+  resize: vertical;
+}
+
+.select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  appearance: none;
+}
+
+.submitButton {
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #305399;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.label{
+  color: #000;
+  margin-left: 4px;
+}
