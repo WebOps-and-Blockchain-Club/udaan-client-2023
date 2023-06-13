@@ -25,42 +25,36 @@ const Carousel = () => {
   }
 
   return (
-    <div>
-        <div className='carouselMain'>
+    <div className='carouselMain'>
       {/* <!-- Slideshow container --> */}
       <div className="slideshow-container">
 
         {/* <!-- Full-width images with number and caption text --> */}
         {slideIndex == 1 && <div className="myslide fade">
-          <div className="numbertext">1 / 3</div>
-          <Image src={cimg1} height ={561}className='image' alt="Caorusel Image 1" />
+
+          <Image src={cimg1} className='image' alt="Caorusel Image 1" />
           <div className="text">Caption Text</div>
         </div>}
         {slideIndex == 2 && <div className="myslide fade">
-          <div className="numbertext">2 / 3</div>
-          <Image src={cimg2} height ={561}className='image' alt="Caorusel Image 2" />
-          {/* <div className="text">Caption Two</div> */}
+          <Image src={cimg2} className='image' alt="Caorusel Image 2" />
+          <div className="text">Caption Two</div>
         </div>}
 
         {slideIndex == 3 && <div className=" myslide fade">
-          <div className="numbertext">3 / 3</div>
-          <Image src={cimg3}height ={561} className='image' alt="Caorusel Image 3" />
-          {/* <div className="text">Caption Three</div> */}
+          <Image src={cimg3} className='image' alt="Caorusel Image 3" />
+          <div className="text">Caption Three</div>
         </div>}
 
         {/* <!-- Next and previous buttons --> */}
         <a className="prev" onClick={() => { plusSlides(-1) }}>&#10094;</a>
         <a className="next" onClick={() => { plusSlides(1) }}>&#10095;</a>
-      </div>
-      <br></br>
-
-      {/* <!-- The dots/circles --> */}
+             {/* <!-- The dots/circles --> */}
       <div className='dotContainer'>
-        <span className="dot" onClick={() => { currentSlide(1) }}></span>
-        <span className="dot" onClick={() => { currentSlide(2) }}></span>
-        <span className="dot" onClick={() => { currentSlide(3) }}></span>
+        <span className={`dot ${slideIndex == 1 ? "active" : ""}`} onClick={() => { currentSlide(1) }}></span>
+        <span className={`dot ${slideIndex == 2 ? "active" : ""}`} onClick={() => { currentSlide(2) }}></span>
+        <span className={`dot ${slideIndex == 3 ? "active" : ""}`} onClick={() => { currentSlide(3) }}></span>
       </div>
-    </div>
+      </div>
     </div>
   );
 }

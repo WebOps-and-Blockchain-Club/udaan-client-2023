@@ -30,7 +30,6 @@ export default function Home() {
 
         <Carousel />
 
-
         <div className={Styles.banner}>
           <div className={Styles.Logo}>
             <Image src="/UdaanLogo.png" width={185} height={95} alt='Udaan Logo' />
