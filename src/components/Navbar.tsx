@@ -1,44 +1,95 @@
 import Link from 'next/link';
-import React from 'react';
-import { useState } from 'react';
-import {CaretDown} from "@phosphor-icons/react";
+import Image from 'next/image';
+import React, { MutableRefObject } from 'react';
+import { useState,useRef } from 'react';
+import UdaanLogo from '#/UdaanLogo.png'
+import { CaretDown, CaretUp } from "@phosphor-icons/react";
 
 const Navbar = () => {
-  const [response, setresponse] = useState(false);
-   const myFunction=() =>{
-    if(response==false){
-      setresponse(true)
-    }
-    else{
-      setresponse(false);
-    }
-    return undefined;
+  const refsidenav = useRef() as MutableRefObject<HTMLDivElement>;
+  const openSidenav=()=>{
+    refsidenav.current.style.maxWidth="190px"
   }
-    return (
-        <div>
-            <div className={`topnav ${response?"responsive":""}`} id="myTopnav">
-                <Link href={'/'} passHref legacyBehavior><a href="#home" className="active">HOME</a></Link>
-                <Link href={'/'} passHref legacyBehavior><a href="#news">ABOUT</a></Link>
-                <Link href={'/'} passHref legacyBehavior><a href="#news">NEWS</a></Link>
-                <Link href={'/'} passHref legacyBehavior><a href="#contact">CONTACTT</a></Link>
-                <Link href={'/'} passHref legacyBehavior><a href="#contact">REGISTER</a></Link>
-                <Link href={'/'} passHref legacyBehavior><a href="#contact">DONATE</a></Link>
-                <Link href={'/'} passHref legacyBehavior><a href="#contact">FIRST RESPONDER</a></Link>
-                <div className="dropdown">
-                    <button className="dropbtn">DROPDOWN 
-                    <i><CaretDown/></i>
-                         {/* try to use side bar insted of mobile menue */}
-                    </button>
-                    <div className="dropdown-content">
-                        <Link href={'/'} passHref legacyBehavior><a href="#">Link 1</a></Link>
-                        <Link href={'/'} passHref legacyBehavior><a href="#">Link 2</a></Link>
-                        <Link href={'/'} passHref legacyBehavior><a href="#">Link 3 dalaf</a></Link>
-                    </div>
-                </div>
-                <a className="icon" onClick={myFunction}>&#9776;</a>
-            </div>
+  const closeSidenav=()=>{
+    refsidenav.current.style.maxWidth="0px"
+  }
+
+  return (
+    <div className="nav">
+      <div className="menubutton" onClick={openSidenav}>&#9776;</div>
+      <div className="navimage">
+        <Link href={'#'} passHref legacyBehavior>
+          <a><Image alt="Ncc Udaan Logo" src={UdaanLogo}></Image></a>
+        </Link>
+      </div>
+      <div ref={refsidenav} className="sideNavigation">
+      <div className="closebutton" onClick={closeSidenav}>&times;
+      </div>
+        <div className='pagelinks'>
+        <ul>
+          <li>
+            <Link href={'#'} passHref legacyBehavior>
+              <a>HOME</a>
+            </Link>
+          </li>
+          <div className='dropdown'>
+            <li>
+              <Link href={'#'} passHref legacyBehavior>
+                <a>ABOUT US <CaretDown className='caretdown'/><CaretUp className='caretup'/></a>
+              </Link>
+              <div className="submenu">
+                <ul>
+                  <li>
+                    <Link href={'#'} passHref legacyBehavior>
+                      <a>OBJECTIVES</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={'#'} passHref legacyBehavior>
+                      <a>ALUMINI</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={'#'} passHref legacyBehavior>
+                      <a>
+                        CHAPTERS
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </div>
+          <li>
+            <Link href={'#'} passHref legacyBehavior>
+              <a>EVENTS</a>
+            </Link></li>
+          <li>
+            <Link href={'#'} passHref legacyBehavior>
+              <a>REGISTER</a>
+            </Link></li>
+          <li>
+            <Link href={'#'} passHref legacyBehavior><a>DONATE</a>
+            </Link></li>
+          <li>
+            <Link href={'#'} passHref legacyBehavior><a>CONTACTS</a>
+            </Link></li>
+          <li>
+            <Link href={'#'} passHref legacyBehavior><a>FIRST RESPONDER</a>
+            </Link>
+          </li>
+        </ul>
         </div>
-    );
+        
+      </div>
+    </div>
+
+  );
 }
 
 export default Navbar;
+
+
+
+
+
