@@ -83,7 +83,7 @@ export default function Home() {
                 <Rule />
               </div>
               <div className={Styles.Visiontext}>
-                <h3>Write few lines on the vision and mission of UDAAN</h3>
+                <h3>Write few lines on the vision and mission of UDAAN Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatibus, explicabo quia numquam voluptatum assumenda odit maiores perferendis ratione necessitatibus inventore, veritatis illo, perspiciatis molestias sunt? Voluptates suscipit similique repellat explicabo blanditiis sint cupiditate, consequatur maiores, amet, inventore consequuntur? Magni nesciunt reprehenderit modi quas eveniet dicta ullam dignissimos a id!</h3>
               </div>
               <button> <span><Users size={24} /></span>First Responder</button>
             </div>

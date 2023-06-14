@@ -197,6 +197,7 @@
 }
 
 .VisionMission {
+  max-width: 550px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -247,6 +248,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .Vissioncontatiner h1 {
@@ -254,6 +256,41 @@
   padding-left: 1rem;
   /* margin: 10px 0px; */
 }
+
+@media screen and  (max-width:900px){
+  .FirstResponderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .leftsideImage img{
+   max-width: 50%;
+  } 
+  .rightsideImage img{
+   max-width: 50%;
+   float: right;
+  }
+  .VisionMission {
+align-content: center;
+  }
+
+
+
+}
+
+@media screen and  (max-width:400px){
+
+  .Visiontext {
+    font-size: small;
+  }
+  .Vissioncontatiner h1{
+    font-size: 1rem;
+  }
+
+}
+  
 
 
 
