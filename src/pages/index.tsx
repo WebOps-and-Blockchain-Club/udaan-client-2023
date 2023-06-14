@@ -12,6 +12,7 @@ import LeftVisionImage from '#/Ellipse 21.png'
 import RighVisionImage from '#/Ellipse 22.png'
 import Rule from '@/components/Rule'
 import {Users} from "@phosphor-icons/react"
+import {FacebookLogo,InstagramLogo,LinkedinLogo} from '@phosphor-icons/react'
 
 export default function Home() {
   return (
@@ -34,16 +35,17 @@ export default function Home() {
           <div className={Styles.Logo}>
             <Image src="/UdaanLogo.png" width={185} height={95} alt='Udaan Logo' />
           </div>
-          <h1>Agency<span>Name</span></h1>
+          <h1>Agency <span className={Styles.headingblue}>Name</span></h1>
           <h2>NCC UDAAN initiative</h2>
           <hr />
-          <p>This is a dummy statement regarding the branding of the E-Commerce site or the products to be sold at that site.</p>
-          <div>
+          <p>This is a dummy statement regarding the branding of the E-Commerce site or the products to be sold at that site. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate explicabo quasi itaque aperiam consequuntur cumque quibusdam reprehenderit impedit rem soluta!</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At pariatur delectus, quo tempora suscipit fuga mollitia eius facere non et quisquam quae dolore repellat cupiditate ullam iusto, enim nihil a consequuntur facilis soluta. Autem voluptate non qui explicabo molestias unde?</p>
+          <div className={Styles.contact}>
             <span><Link href="#">www.website.com</Link></span>
-            <div className="social">
-              <span><Link href="#"><i className="fa-brands fa-facebook"></i></Link></span>
-              <span><Link href="#"><i className="fa-brands fa-instagram"></i></Link></span>
-              <span><Link href="#"><i className="fa-brands fa-linkedin"></i></Link></span>
+            <div className={Styles.social}>
+              <span><Link href="#"><FacebookLogo size={24} /></Link></span>
+              <span><Link href="#"><InstagramLogo size={24}/></Link></span>
+              <span><Link href="#"><LinkedinLogo size={24}></LinkedinLogo></Link></span>
             </div>
           </div>
         </div>
@@ -61,6 +63,7 @@ export default function Home() {
             </div>
             <div className={Styles.aimtext}>
               <h3>Write few lines on the aim and objectives of UDAAN</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae mollitia assumenda natus temporibus et facere ratione possimus incidunt voluptatem quod laudantium quaerat eligendi deserunt veniam id architecto fugit quo cumque tempora, ut aperiam repudiandae! Aut necessitatibus eligendi sapiente quis nulla quae, perspiciatis voluptas quos obcaecati ipsa. Iste quod asperiores facilis.</p>
             </div>
           </div>
         </div>
