@@ -1,8 +1,10 @@
 .container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #305399;
+  height: 100vh;
 }
 
 
@@ -15,11 +17,15 @@
   margin-right: auto;
   margin-top: 0%;
   margin-bottom: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .Logo{
   width: 100%;
-  margin-top: 40%;
+  margin-top: 25%;
   height: auto;
 }
 
@@ -40,6 +46,8 @@
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
 .registration_title{
@@ -79,7 +87,7 @@
   resize: vertical;
 }
 
-.Registration_btn{
+.Registration_btn {
   width: 50%;
   margin: 0 auto;
   padding: 10px;
@@ -88,6 +96,14 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Registration_btn:hover {
+  background-color: #28407f;
 }
 
 .input_title{
