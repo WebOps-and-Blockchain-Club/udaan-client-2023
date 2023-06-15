@@ -1,6 +1,6 @@
 import Image from "next/image"
 import React, { useState, ChangeEvent } from 'react';
-import imageSrc from 'C:/Users/sonu0/Desktop/Logo.png';
+import imageSrc from '../../utils/Logo.png';
 import styles from '../../styles/registration.module.css';
 import axios from "axios";
 // import DatePicker from 'react-datepicker';
@@ -154,7 +154,7 @@ const RegistrationForm = () => {
                   onChange={handleDateChange}
                   required
                 />
-                
+
               </div>
             </div>
           </div>
