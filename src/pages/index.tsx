@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Styles from '@/styles/Home.module.css'
@@ -11,8 +11,8 @@ import TeamworkLogo from '#/🦆 illustration _Team Work_.png'
 import LeftVisionImage from '#/Ellipse 21.png'
 import RighVisionImage from '#/Ellipse 22.png'
 import Rule from '@/components/Rule'
-import {Users} from "@phosphor-icons/react"
-import {FacebookLogo,InstagramLogo,LinkedinLogo} from '@phosphor-icons/react'
+import { Users } from "@phosphor-icons/react"
+import { FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
 
 export default function Home() {
   return (
@@ -44,7 +44,7 @@ export default function Home() {
             <span><Link href="#">www.website.com</Link></span>
             <div className={Styles.social}>
               <span><Link href="#"><FacebookLogo size={24} /></Link></span>
-              <span><Link href="#"><InstagramLogo size={24}/></Link></span>
+              <span><Link href="#"><InstagramLogo size={24} /></Link></span>
               <span><Link href="#"><LinkedinLogo size={24}></LinkedinLogo></Link></span>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function Home() {
               <button> <span><Users size={24} /></span>First Responder</button>
             </div>
             <div className={Styles.rightsideImage}>
-            <Image alt='Ncc training image' src={RighVisionImage}></Image>
+              <Image alt='Ncc training image' src={RighVisionImage}></Image>
             </div>
           </div>
         </div>
