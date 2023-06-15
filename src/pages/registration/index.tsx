@@ -3,8 +3,6 @@ import React, { useState, ChangeEvent } from 'react';
 import imageSrc from '../../utils/Logo.png';
 import styles from '../../styles/registration.module.css';
 import axios from "axios";
-// import DatePicker from 'react-datepicker';
-// import 'react-datepicker/dist/react-datepicker.css';
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -28,10 +26,6 @@ const RegistrationForm = () => {
     reasonToJoin: '',
     photo: "",
   });
-
-  // const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  // };
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const selectedDate = event.target.value;
@@ -76,67 +70,60 @@ const RegistrationForm = () => {
     }
   };
 
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("handle registration logic here");
   };
 
-  function handlePhotoUpload(event: ChangeEvent<HTMLInputElement>): void {
-    throw new Error("Function not implemented.");
-  }
-
   return (
     <div className={styles.container}>
-      <div className={styles.imageTitleContainer}>
-        <div className={styles.imageContainer}>
-          <Image src={imageSrc} alt="Registration" className={styles.image} />
-        </div>
-        <div className={styles.title}>
-          <h2 className={styles.udaan}>UDAAN</h2>
-          <h2 className={styles.responder}>First Responder</h2>
+      <div className={styles.Logo_Container}>
+        <Image src={imageSrc} alt="Registration" className={styles.Logo} />
+        <div className={styles.Logo_title}>
+          <h2>UDAAN</h2>
+          <h2>First Responder</h2>
         </div>
       </div>
-      <div className={styles.registrationContainer}>
-        <h2 className={styles.heading2}>Join Udaan</h2>
-        <h3 className={styles.heading3}>NCC First Responder</h3>
+      <div className={styles.registration_section}>
+        <h2 className={styles.registration_title}>Join Udaan</h2>
+        <h3 className={styles.registration_title}>NCC First Responder</h3>
         <form onSubmit={handleSubmit} className={styles.form}>
 
-          <div className={styles.formRow}>
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="firstName">First Name <span className={formData.firstName === '' ? styles.mandatory : ''}> *</span></label>
+          <div className={styles.row_of_two_Input}>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="firstName">First Name <span className={formData.firstName === '' ? styles.mandatory : ''}> *</span></label>
               <input className={styles.input} type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} required placeholder="Enter your first name" />
             </div>
 
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="middleName">Middle Name</label>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="middleName">Middle Name</label>
               <input className={styles.input} type="text" id="middleName" name="middleName" value={formData.middleName} onChange={handleChange} placeholder="Enter your middle name" />
             </div>
           </div>
 
-          <div className={styles.formRow}>
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="lastName">Last Name </label>
+          <div className={styles.row_of_two_Input}>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="lastName">Last Name </label>
               <input className={styles.input} type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} required placeholder="Enter your last name" />
             </div>
 
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="fatherName">Father Name <span className={formData.fatherName === '' ? styles.mandatory : ''}> *</span></label>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="fatherName">Father Name <span className={formData.fatherName === '' ? styles.mandatory : ''}> *</span></label>
               <input className={styles.input} type="text" id="fatherName" name="fatherName" value={formData.fatherName} onChange={handleChange} required placeholder="Enter your father's name" />
             </div>
           </div>
 
-          <div className={styles.formRow}>
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="motherName">
+          <div className={styles.row_of_two_Input}>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="motherName">
                 Mother Name <span className={formData.motherName === '' ? styles.mandatory : ''}> *</span>
               </label>
               <input className={styles.input} type="text" id="motherName" name="motherName" value={formData.motherName} onChange={handleChange} required placeholder="Enter your mother's name" />
             </div>
 
 
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="dob">
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="dob">
                 Date of Birth<span className={formData.dob !== null ? ' mandatory' : ''}> *</span>
               </label>
               <div className={styles.input}>
@@ -160,10 +147,10 @@ const RegistrationForm = () => {
           </div>
 
 
-          <div className={styles.formRow}>
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="gender">Select Gender <span className={formData.gender === '' ? styles.mandatory : ''}> *</span></label>
-              <select className={styles.select} id="gender" name="gender" value={formData.gender} onChange={handleChange} required>
+          <div className={styles.row_of_two_Input}>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="gender">Select Gender <span className={formData.gender === '' ? styles.mandatory : ''}> *</span></label>
+              <select className={styles.selectInput} id="gender" name="gender" value={formData.gender} onChange={handleChange} required>
                 <option value="">Select Gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -171,45 +158,45 @@ const RegistrationForm = () => {
               </select>
             </div>
 
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="contactNo">Contact Number <span className={formData.contactNo === '' ? styles.mandatory : ''}> *</span></label>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="contactNo">Contact Number <span className={formData.contactNo === '' ? styles.mandatory : ''}> *</span></label>
               <input className={styles.input} type="text" id="contactNo" name="contactNo" value={formData.contactNo} onChange={handleChange} required placeholder="Enter your contact number" />
             </div>
           </div>
 
-          <div className={styles.formRow}>
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="email">Email Address <span className={formData.email === '' ? styles.mandatory : ''}> *</span></label>
+          <div className={styles.row_of_two_Input}>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="email">Email Address <span className={formData.email === '' ? styles.mandatory : ''}> *</span></label>
               <input className={styles.input} type="email" id="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Enter your email" />
             </div>
 
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="aadhar">Aadhar Number <span className={formData.aadhar === '' ? styles.mandatory : ''}> *</span></label>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="aadhar">Aadhar Number <span className={formData.aadhar === '' ? styles.mandatory : ''}> *</span></label>
               <input className={styles.input} type="text" id="aadhar" name="aadhar" value={formData.aadhar} onChange={handleChange} required placeholder="Enter your Aadhar number" />
             </div>
           </div>
 
-          <div className={styles.formRow}>
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="pan">PAN</label>
+          <div className={styles.row_of_two_Input}>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="pan">PAN</label>
               <input className={styles.input} type="text" id="pan" name="pan" value={formData.pan} onChange={handleChange} placeholder="Enter your PAN number" />
             </div>
 
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="address">Address <span className={formData.address === '' ? styles.mandatory : ''}> *</span></label>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="address">Address <span className={formData.address === '' ? styles.mandatory : ''}> *</span></label>
               <textarea className={styles.textarea} id="address" name="address" value={formData.address} onChange={handleChange} required placeholder="Enter your address"></textarea>
             </div>
           </div>
 
-          <div className={styles.formRow}>
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="pincode">Pincode <span className={formData.pincode === '' ? styles.mandatory : ''}> *</span></label>
+          <div className={styles.row_of_two_Input}>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="pincode">Pincode <span className={formData.pincode === '' ? styles.mandatory : ''}> *</span></label>
               <input className={styles.input} type="text" id="pincode" name="pincode" value={formData.pincode} onChange={handleChange} required placeholder="Enter your pincode" />
             </div>
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="state">State</label>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="state">State</label>
               {/* <input className={styles.input} type="text" id="state" name="state" value={formData.state} onChange={handleChange} placeholder="Enter your state" /> */}
-              <select className={styles.select} id="state" name="state" value={formData.state} onChange={handleChange} required>
+              <select className={styles.selectInput} id="state" name="state" value={formData.state} onChange={handleChange} required>
                 <option value="" disabled selected>Choose State</option>
                 <option value="Andaman Nicobar">Andaman Nicobar</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -252,15 +239,15 @@ const RegistrationForm = () => {
             </div>
           </div>
 
-          <div className={styles.formRow}>
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="district">District <span className={formData.district === '' ? styles.mandatory : ''}> *</span></label>
+          <div className={styles.row_of_two_Input}>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="district">District <span className={formData.district === '' ? styles.mandatory : ''}> *</span></label>
               <input className={styles.input} type="text" id="district" name="district" value={formData.district} onChange={handleChange} required placeholder="Enter your district" />
             </div>
 
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="educationQualification">Education Qualification <span className={formData.educationQualification === '' ? styles.mandatory : ''}> *</span></label>
-              <select className={styles.select} id="educationQualification" name="educationQualification" value={formData.educationQualification} onChange={handleChange} required>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="educationQualification">Education Qualification <span className={formData.educationQualification === '' ? styles.mandatory : ''}> *</span></label>
+              <select className={styles.selectInput} id="educationQualification" name="educationQualification" value={formData.educationQualification} onChange={handleChange} required>
                 <option value="">Select Qualification</option>
                 <option value="MATRICULATION">MATRICULATION</option>
                 <option value="INTERMEDIATE">INTERMEDIATE</option>
@@ -271,23 +258,23 @@ const RegistrationForm = () => {
             </div>
           </div>
 
-          <div className={styles.formRow}>
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="specialQualification">Special Qualification</label>
+          <div className={styles.row_of_two_Input}>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="specialQualification">Special Qualification</label>
               <input className={styles.input} type="text" id="specialQualification" name="specialQualification" value={formData.specialQualification} onChange={handleChange} placeholder="Enter your special qualification" />
             </div>
 
-            <div className={styles.formInput}>
-              <label className={styles.label} htmlFor="reasonToJoin">Reason to Join <span className={formData.reasonToJoin === '' ? styles.mandatory : ''}> *</span></label>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title} htmlFor="reasonToJoin">Reason to Join <span className={formData.reasonToJoin === '' ? styles.mandatory : ''}> *</span></label>
               <textarea className={styles.textarea} id="reasonToJoin" name="reasonToJoin" value={formData.reasonToJoin} onChange={handleChange} required placeholder="Enter your reason to join"></textarea>
             </div>
           </div>
 
-          <div className={styles.formRow}>
-            <div className={styles.formInput}>
-              <label className={styles.label}>
+          <div className={styles.row_of_two_Input}>
+            <div className={styles.Input_box}>
+              <label className={styles.input_title}>
                 Recent Photo
-                <span className={styles.mandatory}> *</span>
+                <span className={formData.reasonToJoin === '' ? styles.mandatory : ''}> *</span>
               </label>
               <input
                 type="file"
@@ -300,8 +287,8 @@ const RegistrationForm = () => {
           </div>
 
 
-          <div className={styles.formRow}>
-            <button type="submit" className={styles.submitButton}>Register</button>
+          <div className={styles.row_of_two_Input}>
+            <button type="submit" className={styles.Registration_btn}>Register</button>
           </div>
         </form>
       </div >
@@ -309,75 +296,4 @@ const RegistrationForm = () => {
   );
 };
 
-export default RegistrationForm;
-
-
-
-
-
-
-
-
-// <div className="formRow">
-//             <label className="label">Are You? <span className="req">*</span></label>
-//           </div>
-//           <div className="formRow">
-//             <input type="radio" name="you" value="Cadet" id="cadet" className="input" />
-//             <label htmlFor="cadet" className="label">Cadet</label>
-//             <input type="radio" name="you" value="Ex-Cadet" id="exCadet" className="input" />
-//             <label htmlFor="exCadet" className="label">Ex-Cadet</label>
-//             <input type="radio" name="you" value="Belong from NCC" id="ncc" className="input" />
-//             <label htmlFor="ncc" className="label">Belong from NCC</label>
-//             <input type="radio" name="you" value="Civilian" id="civilian" className="input" checked />
-//             <label htmlFor="civilian" className="label">Civilian</label>
-//           </div>
-
-//           <div id="vdiv" style={{ display: 'none' }}>
-//             <div className="formRow">
-//               <div id="cadetshow" className="formInput" style={{ display: 'none' }}>
-//                 <label className="label">School / College Name <span className="req">*</span></label>
-//                 <input type="text" className="input" name="school" id="school" placeholder="School / College Name..." />
-//               </div>
-//               <div className="formInput">
-//                 <label className="label">Directorate <span className="req reqshow">*</span></label>
-//                 <select id="directorate" className="select" name="directorate">
-//                   <option value="">Select Directorate</option>
-//                   <option value="Andhra Pradesh & Telangana">Andhra Pradesh & Telangana</option>
-//                   <option value="Bihar & Jharkhand">Bihar & Jharkhand</option>
-//                   {/* ... */}
-//                 </select>
-//               </div>
-//             </div>
-//             {/* More form inputs */}
-//             {/* ... */}
-//           </div>
-
-//           <div className="formRow">
-//             <label className="label">Why do you wish to join UDAAN?</label>
-//             <textarea name="why" className="textarea" placeholder="Type your message (if any)"></textarea>
-//           </div>
-
-//           <div className="formRow">
-//             <label className="label">Special Qualification</label>
-//             <select name="extra" className="select">
-//               <option value="">Select Special Qualification</option>
-//               <option value="FORMER/EXCADETS">FORMER/EXCADETS</option>
-//               <option value="SERVED IN NCC AS ANO">SERVED IN NCC AS ANO</option>
-//               {/* ... */}
-//             </select>
-//           </div>
-
-//           <div className="formRow">
-//             <input type="checkbox" required className="input" />
-//             <span className="req">*</span>
-//             <span className="label">I hereby declare that the information given in this application is true and correct to the best of my knowledge and belief. In case any information given in this application proves to be false or incorrect, I shall be responsible for the consequences.</span>
-//           </div>
-
-//           <button type="submit" name="submitbtn" className="submitButton">Submit</button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Registration;
+export default RegistrationForm; 
