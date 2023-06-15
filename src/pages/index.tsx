@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer'
 import Styles from '@/styles/Home.module.css'
 import Script from 'next/script'
