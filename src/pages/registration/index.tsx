@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 import React, { useState, ChangeEvent } from 'react';
 import imageSrc from '../../utils/Logo.png';
 import styles from '../../styles/registration.module.css';
