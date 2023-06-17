@@ -1,31 +1,27 @@
 .container{
   display: flex;
   flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #305399;
   height: 100vh;
+  margin-top: 5%;
 }
-
-
 
 /* styling Logo */
 .Logo_Container{
   padding: 1%;
-  width: 30vw;
+  width: 25vw;
+  height: 100%;
   margin-left: 0%;
   margin-right: auto;
-  margin-top: 0%;
   margin-bottom: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  background-color: #305399;
 }
 
 .Logo{
   width: 100%;
-  margin-top: 25%;
+  margin-top: 35%;
   height: auto;
 }
 
@@ -37,23 +33,29 @@
 }
 
 
-
 /* styling Registration part */
 .registration_section{
-  width: 70vw;
+  width: 75vw;
+  height: 100%;
   margin-right: 0;
   margin-left: auto;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   flex-grow: 1;
   overflow-y: auto;
 }
 
-.registration_title{
+.registration_title,
+.registration_title1{
+  margin-top: 0%;
   font-size: 35px;
   text-align: center;
   color: #305399;
+}
+
+.registration_title1{
+  margin-top: 10%;
 }
 
 .row_of_two_Input{
