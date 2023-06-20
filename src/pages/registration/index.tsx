@@ -330,12 +330,25 @@ const RegistrationForm = () => {
                 <div className={styles.Input_box}>
                   <label className={styles.input_title}>
                     Recent Photo
-                    <span className={formData.reasonToJoin === '' ? styles.mandatory : ''}> *</span>
+                    <span className={formData.photo === '' ? styles.mandatory : ''}> *</span>
                   </label>
                   <input
                     type="file"
                     className={styles.input}
                     name="photo"
+                    required
+                  />
+                </div>
+
+                <div className={styles.Input_box}>
+                  <label className={styles.input_title}>
+                    Password
+                    <span className={formData.password === '' ? styles.mandatory : ''}> *</span>
+                  </label>
+                  <input
+                    type="password"
+                    className={styles.input}
+                    name="password"
                     required
                   />
                 </div>
