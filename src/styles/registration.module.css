@@ -1,96 +1,76 @@
-.container {
+.container{
   display: flex;
+  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  margin-top: 5%;
+}
+
+/* styling Logo */
+.Logo_Container{
+  padding: 1%;
+  width: 25vw;
+  height: 100%;
+  margin-left: 0%;
+  margin-right: auto;
+  margin-bottom: auto;
   background-color: #305399;
 }
 
-.registrationContainer {
-  width: 70vw;
+.Logo{
+  width: 100%;
+  margin-top: 35%;
+  height: auto;
+}
+
+.Logo_title{
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+}
+
+
+/* styling Registration part */
+.registration_section{
+  width: 75vw;
+  height: 100%;
   margin-right: 0;
   margin-left: auto;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
-.heading2 {
-  margin-top: 5vh;
-  margin-bottom: 10px;
+.registration_title,
+.registration_title1{
+  margin-top: 0%;
   font-size: 35px;
   text-align: center;
   color: #305399;
 }
 
-.heading3 {
-  text-align: center;
-  font-size: 35px;
-  color: #305399;
-  margin-bottom: 10vh;
+.registration_title1{
+  margin-top: 10%;
 }
 
-
-.imageTitleContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.imageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  flex-direction: column;
-  width: 300px; /* Adjust the width as per your image size */
-  height: 300px; /* Adjust the height as per your image size */
-}
-
-.image {
-  margin-left: 25%;
-  margin-top: -220%;
-  width: 300px;
-  height: auto;
-  margin-right: 20px;
-}
-
-.title {
-  /* background-color: #000; */
-  width: 100%;
-  margin-left: 18%;
-  text-align: center;
-  margin-top: -120%;
-}
-
-.udaan {
-  font-size: 42px;
-  margin: 4px;
-}
-
-.responder {
-  font-size: 42px;
-  margin: 0;
-}
-
-
-.form {
-  margin-top: 20px;
-}
-
-.formRow {
+.row_of_two_Input{
   display: flex;
   margin-bottom: 10px;
 }
 
-.formInput {
+.Input_box{
   flex: 1;
   margin-right: 10px;
 }
 
 .input,
-.select,
-.textarea {
+.selectInput,
+.textarea{
   width: 100%;
   height: 60%;
   padding: 10px;
@@ -109,17 +89,8 @@
   resize: vertical;
 }
 
-.select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  appearance: none;
-}
-
-.submitButton {
-  width: 60%;
+.Registration_btn {
+  width: 50%;
   margin: 0 auto;
   padding: 10px;
   background-color: #305399;
@@ -127,9 +98,17 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
 }
 
-.label{
+.Registration_btn:hover {
+  background-color: #28407f;
+}
+
+.input_title{
   color: #000;
   margin-left: 4px;
 }
