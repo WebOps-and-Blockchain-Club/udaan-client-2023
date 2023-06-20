@@ -1,78 +1,71 @@
-.container{
+.container {
   display: flex;
   flex-direction: column;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin-top: 5%;
 }
 
 /* styling Logo */
-.Logo_Container{
+.Logo_Container {
+  position: fixed;
+  left: 0;
+  top: 0;
   padding: 1%;
   width: 25vw;
   height: 100%;
-  margin-left: 0%;
-  margin-right: auto;
-  margin-bottom: auto;
   background-color: #305399;
 }
 
-.Logo{
+.Logo {
   width: 100%;
-  margin-top: 35%;
+  margin-top: 45%;
   height: auto;
 }
 
-.Logo_title{
-  width: 100%;
+.Logo_title {
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   font-size: 25px;
 }
 
 
 /* styling Registration part */
-.registration_section{
+.registration_section {
+  position: fixed;
+  right: 0;
+  top: 0;
   width: 75vw;
   height: 100%;
-  margin-right: 0;
-  margin-left: auto;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  flex-grow: 1;
   overflow-y: auto;
 }
 
 .registration_title,
-.registration_title1{
-  margin-top: 0%;
+.registration_title1 {
   font-size: 35px;
   text-align: center;
   color: #305399;
 }
 
-.registration_title1{
-  margin-top: 10%;
+.registration_title1 {
+  margin-top: 15%;
 }
 
-.row_of_two_Input{
+.row_of_two_Input {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
-.Input_box{
-  flex: 1;
+.Input_box {
+  flex: 2;
   margin-right: 10px;
 }
 
 .input,
 .selectInput,
-.textarea{
+.textarea {
   width: 100%;
-  height: 60%;
   padding: 10px;
   border: 1px solid #ccc;
   background-color: white;
@@ -85,7 +78,7 @@
   box-shadow: 0 0 0.1 0.1 black;
 }
 
-.textarea{
+.textarea {
   resize: vertical;
 }
 
@@ -106,9 +99,15 @@
 
 .Registration_btn:hover {
   background-color: #28407f;
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.input_title{
+.Registration_btn:active {
+  background-color: #4473a0;
+}
+
+.input_title {
   color: #000;
   margin-left: 4px;
 }
