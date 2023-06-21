@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, MutableRefObject, RefObject } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import carouselImagearray from './CarouselImage';
 
@@ -19,7 +19,7 @@ const Carousel = () => {
       resetTimeout()
     timeoutRef.current = window.setTimeout(
     () =>{
-      setslideIndex((prevIndex) =>  prevIndex === carouselImagearray.length ? 0: prevIndex + 1)},500000);
+      setslideIndex((prevIndex) =>  prevIndex === carouselImagearray.length ? 0: prevIndex + 1)},5000);
   
     return () => {
       resetTimeout();
@@ -34,7 +34,7 @@ const Carousel = () => {
       <div className="slideshow-container">
 
         {carouselImagearray.map((info, index) => {
-          return (slideIndex == index) && <div className="myslide fade">
+          return (slideIndex == index) && <div key={info.url} className="myslide fade">
 
             <Image src={info.url} className='image' alt={info.Alernaivetext} width={1024} height={1024}/>
             <div className="text">{info.Title}</div>

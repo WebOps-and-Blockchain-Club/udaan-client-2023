@@ -24,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/UdaanLogo.png" />
         {/* <link rel="icon" href="/Rectangle.svg" />  */}
       </Head>
-      <Script src='https://kit.fontawesome.com/16ae4a1ead.js' crossOrigin='anonymous' strategy='lazyOnload' />
+      {/* <Script src='https://kit.fontawesome.com/16ae4a1ead.js' crossOrigin='anonymous' strategy='lazyOnload' /> */}
       <Navbar />
       <main className={Styles.main}>
 

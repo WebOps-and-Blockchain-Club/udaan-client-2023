@@ -12,14 +12,14 @@ const Footer = () => {
           <div className="footerLeft">
             <a>
               <div className='webopsLogo'>
-              <Image src={webops} alt='Webops Logo'/>
+                <Image src={webops} alt='Webops Logo' />
               </div>
               <div className='webopsLogo'>
-              <Image src={cfi} alt="Center For Innovation logo"/>
+                <Image src={cfi} alt="Center For Innovation logo" />
               </div>
-             
+
             </a>
-              <p>Developed by WebOps and Blockchain Club Centre For Innovationps, IIT Madras</p>
+            <p>Developed by WebOps and Blockchain Club Centre For Innovationps, IIT Madras</p>
           </div>
           <div className="footerRight">
             <div className="footerRightContainer">
@@ -77,19 +77,22 @@ const Footer = () => {
 
             </div>
             <div className="footerRightContainer">
-              <h2>CATEGORIES</h2>
+              <h2> <Link href='/policies' passHref legacyBehavior><a>WEBSITE POLICIS</a></Link></h2>
               <ul>
                 <li>
-                  <a>First Link</a>
+                  <Link href='/policies/#Copyright' passHref legacyBehavior><a>Copyright</a></Link>
                 </li>
                 <li>
-                  <a>Second Link</a>
+                  <Link href='/policies/#Hyperlinking' passHref legacyBehavior><a>Hyperlinking</a></Link>
+
                 </li>
                 <li>
-                  <a>Third Link</a>
+                  <Link href='/policies/#Privacy' passHref legacyBehavior><a>Privacy</a></Link>
+
                 </li>
                 <li>
-                  <a>Fourth Link</a>
+                  <Link href='/policies/#TermsConditions' passHref legacyBehavior><a>Terms & Conditions</a></Link>
+
                 </li>
               </ul>
 
@@ -99,8 +102,8 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottomContainer">
             <p>© 2023 Webops and Blockchain club CFI —
-            <Link href="https://cfi.iitm.ac.in/clubs/webops-and-blockchain-club" passHref legacyBehavior>
-              <a  rel="noopener noreferrer" target="_blank">Webops@cfi</a>
+              <Link href="https://cfi.iitm.ac.in/clubs/webops-and-blockchain-club" passHref legacyBehavior>
+                <a rel="noopener noreferrer" target="_blank">Webops@cfi</a>
               </Link>
             </p>
             <span>

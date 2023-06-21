@@ -65,7 +65,7 @@ const Navbar = () => {
               <a>EVENTS</a>
             </Link></li>
           <li>
-            <Link href={'#'} passHref legacyBehavior>
+            <Link href='/registration' passHref legacyBehavior>
               <a>REGISTER</a>
             </Link></li>
           <li>
